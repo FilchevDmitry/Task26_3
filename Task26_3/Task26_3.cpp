@@ -5,8 +5,11 @@
 int main()
 {   
     Screen screen;
-    int a = 0;
-    int b = 0;
-    screen.getDimensions(a, b);
-    std::cout << a<<" "<<b;
+    Window window;
+    int X1 = 50;
+    int Y1 = 50;
+    int X2 = 0;
+    int Y2 = 0;
+    window.setPosition (X1, Y1, X2,Y2);
+    
 }

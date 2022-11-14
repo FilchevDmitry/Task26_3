@@ -1,8 +1,8 @@
 #include"screen.h"
 #include<iostream>
 
-void Screen::getDimensions(int& a, int& b)
+void Screen::getDimensionsScreen(int& width, int& height)
 {
-	a = width;
-	b = height;
+	width = widthScreen;
+	height = heightScreen;
 }

@@ -2,8 +2,8 @@
 class Screen
 {
 public:
-	void getDimensions(int& a, int& b);
+	void getDimensionsScreen(int &width, int &height);
 private:
-	int width = 800;
-	int height = 600;
+	int widthScreen = 800;
+	int heightScreen = 600;
 };
