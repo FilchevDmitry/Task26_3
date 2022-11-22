@@ -6,10 +6,55 @@ int main()
 {   
     Screen screen;
     Window window;
-    int X1 = 50;
-    int Y1 = 50;
-    int X2 = 0;
-    int Y2 = 0;
-    window.setPosition (X1, Y1, X2,Y2);
+    int num = 0;
+    bool exit = true;
+    while (exit)
+    {
+        std::cout << "Input:\n1-move\n2-resize\n3-display\n4-close\n";
+        std::cin >> num;
+        switch (num)
+        {
+            case 1:
+            {
+                int x = 0;
+                int y = 0;
+                std::cout << "Input new coordinates\n";
+                std::cout << "X=";
+                std::cin >> x;
+                std::cout << "Y=";
+                std::cin >> y;
+                window.setPosition(x, y);
+                break;
+            }
+            case 2:
+            {
+                int width = 0;
+                int height = 0;
+                std::cout << "Input new dimensions\n";
+                std::cout << "width=";
+                std::cin >> width;
+                std::cout << "height=";
+                std::cin >> height;
+                window.setDimentionWindow(width, height);
+                break;
+            }
+            case 3:
+            {
+                screen.print();
+                break;
+            }
+            case 4:
+            {
+                exit = false;
+                break;
+            }
+            default: 
+            {
+            std::cout << "Incorrect input\n";
+            break; 
+            }
+        }
+    }
+    
     
 }
