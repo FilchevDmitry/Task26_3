@@ -1,7 +1,7 @@
 #include"screen.h"
 #include"window.h"
 #include<iostream>
-Window win;
+
 void Screen::getDimensionsScreen(int& width, int& height)
 {
 	width = widthScreen;
@@ -12,7 +12,7 @@ bool Screen::chek(int &posX,int &posY,int &width,int &height)
 
 	if (posX >= 0 && posY >= 0)
 	{
-		if ((posX + height) > heightScreen || ((posY + width) > widthScreen))
+		if ((posX + height) > Screen::heightScreen || ((posY + width) > Screen::widthScreen))
 		{
 			return false;
 		}
@@ -22,7 +22,7 @@ bool Screen::chek(int &posX,int &posY,int &width,int &height)
 	else
 		return false;
 }
-void Screen::print()
+void Screen::print(Window& win)
 {
 	int x = 0;
 	int y = 0;
@@ -32,11 +32,11 @@ void Screen::print()
 	win.getDimentionWindow(width, height);
 	int temp1 = x;
 	int temp2 = y;
-	for (int i = 0; i < heightScreen ; i++)
+	for (int i = 0; i < Screen::heightScreen ; i++)
 	{
 		int count = 0;
 		x = temp1;
-		for (int j = 0; j < widthScreen; j++)
+		for (int j = 0; j < Screen::widthScreen; j++)
 		{	
 			if ((x == j) && (y == i))
 			{

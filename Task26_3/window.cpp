@@ -1,8 +1,8 @@
 #include<iostream>
 #include"window.h"
 #include"screen.h"
-Screen chekPosition;
-void Window::setDimentionWindow(int& width, int& height)
+
+void Window::setDimentionWindow(int& width, int& height,Screen &chekPosition)
 {
 	if (width > 0 && height > 0)
 	{	
@@ -21,7 +21,7 @@ void Window::setDimentionWindow(int& width, int& height)
 	}
 }
 
-void Window::setPosition(int& X, int& Y)
+void Window::setPosition(int& X, int& Y, Screen &chekPosition)
 {
 	if (chekPosition.chek(X, Y, widthWindow, heightWindow))
 	{

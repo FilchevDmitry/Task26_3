@@ -23,7 +23,7 @@ int main()
                 std::cin >> x;
                 std::cout << "Y=";
                 std::cin >> y;
-                window.setPosition(x, y);
+                window.setPosition(x, y,screen);
                 break;
             }
             case 2:
@@ -35,12 +35,12 @@ int main()
                 std::cin >> width;
                 std::cout << "height=";
                 std::cin >> height;
-                window.setDimentionWindow(width, height);
+                window.setDimentionWindow(width, height,screen);
                 break;
             }
             case 3:
             {
-                screen.print();
+                screen.print(window);
                 break;
             }
             case 4:
